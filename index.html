@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        #languageSelect {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+        #codeEditor {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 20px;
+            padding: 10px;
+            font-family: monospace;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        #output {
+            width: 100%;
+            height: 150px;
+            background-color: #1e1e1e;
+            color: #fff;
+            padding: 10px;
+            font-family: monospace;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            overflow-y: auto;
+        }
+        #compileBtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        #compileBtn:hover {
+            background-color: #45a049;
+        }
+        #compileBtn:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Code Editor</h2>
+            <select id="languageSelect">
+                <option value="0">Python</option>
+                <option value="4">JavaScript</option>
+                <option value="7">C</option>
+                <option value="77">C++</option>
+                <option value="8">Java</option>
+            </select>
+        </div>
+        <textarea id="codeEditor" placeholder="Write your code here..."></textarea>
+        <div id="output">OUTPUT:</div>
+        <button id="compileBtn">Compile & Run</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
